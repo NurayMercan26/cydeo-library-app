@@ -10,7 +10,7 @@ Feature: Login feature
     When librarian enter username "librarian60@library"
     And librarian enter password "Lj5VU4Tq"
     And librarian click sign in button
-    And librarian should be able see "1251" users
+    And librarian should be able see "Users" users
     And  librarian click dropdown
     Then librarian is logout
 
