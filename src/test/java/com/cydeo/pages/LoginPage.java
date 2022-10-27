@@ -31,7 +31,7 @@ public class LoginPage {
     @FindBy(xpath = " //a[@class='dropdown-item']")
     public WebElement logout;
 
-    @FindBy(xpath = "//h2[.='1251']")
+    @FindBy(xpath = "//h6[@class=\"text-muted\"]")
     public WebElement userCount;
 
     @FindBy(id = "book_count")
