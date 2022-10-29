@@ -37,4 +37,5 @@ public class SearchTablePage {
         titles.addAll(Arrays.asList(actions,user_ID,full_Name,email,group,status));
         return titles;
     }
+
 }

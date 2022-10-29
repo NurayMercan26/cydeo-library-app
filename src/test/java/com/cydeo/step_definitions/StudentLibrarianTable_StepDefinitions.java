@@ -4,6 +4,7 @@ import com.cydeo.pages.LoginPage;
 import com.cydeo.pages.StudentLibrarianPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -40,15 +41,13 @@ public class StudentLibrarianTable_StepDefinitions {
 
     @When("student  should be able to see homepage")
     public void student_should_be_able_to_see_homepage() {
-       studentLibrarianPage.usersLink.click();
-       WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);wait.until(ExpectedConditions.urlContains("books"));
 
-       Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("books"));
+        System.out.println("student  should be able to see homepage");
 
     }
     @Then("student logout")
     public void student_logout() {
-        studentLibrarianPage.dropdownButton.click();
+
         studentLibrarianPage.logout.click();
 
 
@@ -79,17 +78,14 @@ public class StudentLibrarianTable_StepDefinitions {
     }
 
     @When("student  should be able to see homepage {string}")
-    public void student_should_be_able_to_see_homepage(String usersLink ) {
-        studentLibrarianPage.usersLink.sendKeys();
+    public void student_should_be_able_to_see_homepage(String string ) {
+        studentLibrarianPage.dropdownButton.click();
     }
-    @When("librarian user should be able to see dashboard {string}")
-    public void librarian_user_should_be_able_to_see_dashboard(String usersLink) {
-        studentLibrarianPage.usersLink.sendKeys();
 
-    }
+
     @Then("librarian logout")
     public void librarian_logout() {
-        studentLibrarianPage.dropdownButton.click();
+       // studentLibrarianPage.dropdownButton.click();
         studentLibrarianPage.logout.click();
 
 
@@ -97,5 +93,10 @@ public class StudentLibrarianTable_StepDefinitions {
     }
 
 
+    @And("librarian user should be able to see dashboard {string}")
+    public void librarianUserShouldBeAbleToSeeDashboard(String string) {
 
+        studentLibrarianPage.dropdownButton.click();
+
+    }
 }

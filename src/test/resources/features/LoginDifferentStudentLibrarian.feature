@@ -3,17 +3,15 @@ Feature:  Login feature
   Background: User should go to the login page
 
 
-
+@wip
   Scenario Outline:User should be able to login with valid credentials as a student
     Given user enter on the login page
     When student enters username "<username>"
     And student enters password "<password>"
     And student clicks sign in button
-    And student  should be able to see homepage "<account name>"
+   And librarian user should be able to see dashboard "<account name>"
     Then student logout
-    Then tables should have following columns
 
-@librarian
     Examples: Valid credentials for student user
 
       | username          | password | account name    |
@@ -24,7 +22,7 @@ Feature:  Login feature
       | student24@library | OwsiR4u5 | Test Student 24 |
 
 
-
+@wip
   Scenario Outline: User should be able to login with valid credentials as a librarian
     Given users is  enter on the login page
     When librarian is enter username "<username>"

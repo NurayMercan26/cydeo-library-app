@@ -4,7 +4,7 @@ Feature: Login feature
   Student and Librarian
 
   Background: User should go to the login page
-@wip
+
   Scenario: User should be able to login with valid credentials as a librarian
     Given user go to  on the login page
     When librarian enter username "librarian60@library"
@@ -15,7 +15,7 @@ Feature: Login feature
     Then librarian is logout
 
 
-@wip
+
   Scenario: User should be able to login with valid credentials as a student
     When student enter username "student55@library"
     And student enter password "xBLy3ufr"

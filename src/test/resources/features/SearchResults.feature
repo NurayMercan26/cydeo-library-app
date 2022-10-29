@@ -1,5 +1,5 @@
 Feature: Check "Users" page as a librarian user
-
+  @wip
   Scenario: Table columns names
     Given librarian is on the login page
     When librarian enters username "librarian1@library"

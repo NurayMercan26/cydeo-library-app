@@ -28,20 +28,18 @@ public class StudentLibrarianPage {
          @FindBy(xpath = "//span[.='Users']")
          public WebElement usersLink;
 
-        @FindBy (xpath = " //li[@class= 'nav-item dropdown']")
+        @FindBy (id="navbarDropdown")
         public WebElement dropdownButton;
 
 
         @FindBy(xpath = " //a[@class='dropdown-item']")
         public WebElement logout;
 
-    public List<WebElement> total(List<WebElement> titles){
-        titles.addAll(Arrays.asList(searchBox,Password,Button,dropdownButton,logout ));
-        return titles;
+
 
 
     }
-    }
+
 
 
 
